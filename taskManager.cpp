@@ -13,9 +13,9 @@ public:
 };
 
 class TaskManager {
-private:
+private: 
 	vector<Task> tasks;
-	string filename = "tasks.txt";
+	
 
 public:
 	void addTask(string& name, string& description) {
@@ -64,7 +64,7 @@ int main() {
 		cout << "2. Delete Task\n";
 		cout << "3. Mark Task as Done\n";
 		cout << "4. List Tasks\n";
-		cout << "6. Exit\n";
+		cout << "5. Exit\n";
 		cout << "Enter your choice: ";
 		cin >> choice;
 
@@ -91,17 +91,14 @@ int main() {
 			break;
 		case 4:
 			obj.listTasks();
-			break;
-        case 5:
-            cout<<"Sorting by Title:\n";
-            obj.sortByTitle();;
+			break;        
 		
 		default:
 			std::cout << "Invalid choice. Please try again.\n";
 			break;
 		}
 
-	} while (choice != 6);
+	} while (choice != 5);
 
 	return 0;
 }
